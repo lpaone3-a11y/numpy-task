@@ -21,7 +21,13 @@ def rango_matrice(m: list) -> int:
     pass
 
 def risolvi_sistema_lineare(A: list, b: list) -> np.ndarray:
-    """Sub-task 3: Risolvere un Sistema Lineare."""
+    R=int(input("Inserire numero righe matrice: "))
+    print('Inserire', R*R, 'numeri separati da spazio: ')
+    vals = list(map(int, input().split()))
+    A= np.array(vals).reshape(R, R)
+    b= list(map(int, input("Inserire numeri separati da spazio (tanti quante le righe della matrice: ").split()))
+    x=np.linalg.solve(A,b)
+    return x
     pass
 
 def correlazione_matrici(m1: list, m2: list) -> np.ndarray:

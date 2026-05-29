@@ -31,7 +31,17 @@ def risolvi_sistema_lineare(A: list, b: list) -> np.ndarray:
     pass
 
 def correlazione_matrici(m1: list, m2: list) -> np.ndarray:
-    """Sub-task 4: Correlazione tra Matrici 2x2."""
+    print("Inserire 4 numeri separati da spazio: ")
+    vals = list(map(int, input().split()))
+    A= np.array(vals).reshape(2, 2)
+
+    print("Inserire 4 numeri separati da spazio: ")
+    vals = list(map(int, input().split()))
+    B= np.array(vals).reshape(2, 2)
+
+    matrix = np.corrcoef(A,B)
+    return matrix
+
     pass
 
 def operazioni_elemento_per_elemento(v1: list) -> tuple:

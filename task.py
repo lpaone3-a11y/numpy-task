@@ -10,7 +10,14 @@ def prodotto_scalare(v1: list, v2: list) -> float:
     pass
 
 def rango_matrice(m: list) -> int:
-    """Sub-task 2: Calcola il rango di una matrice."""
+    R = int(input("Inserire numero righe matrice: "))
+    C = int(input("Inserire numero colonne matrice: "))
+
+    print('Inserire',R*C,'numeri separati da spazio: ')
+    vals = list(map(int, input().split()))
+    mat = np.array(vals).reshape(R, C)
+    rango=np.linalg.matrix_rank(mat)
+    return rango
     pass
 
 def risolvi_sistema_lineare(A: list, b: list) -> np.ndarray:

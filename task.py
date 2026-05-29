@@ -3,7 +3,10 @@ import numpy as np
 # Controlla il file readme.md per i dettagli su ciascun sub-task
 
 def prodotto_scalare(v1: list, v2: list) -> float:
-    """Sub-task 1: Prodotto Scalare."""
+    v=array = list(map(int, input("Inserire lista di numeri separati da spazio: ").split()))
+    w=array = list(map(int, input("Inserire altra lista di numeri separati da spazio: ").split()))
+    p_scalare=np.inner(v,w)
+    return p_scalare
     pass
 
 def rango_matrice(m: list) -> int:
